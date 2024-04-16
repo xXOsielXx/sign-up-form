@@ -1,0 +1,174 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 20px;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	font-family: Arial, sans-serif;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: row;
+}
+
+aside {
+	display: none;
+}
+
+main {
+	width: 100%;
+}
+
+#signup-wrapper,
+#submit-wrapper,
+#login-wrapper {
+	text-align: center;
+}
+
+#signup-wrapper {
+	color: #000;
+	margin-bottom: 64px;
+}
+
+h1 {
+	margin-top: 32px;
+	font-size: 2rem;
+	margin-bottom: 16px;
+}
+
+form ul {
+	display: grid;
+	grid-template-columns: 300px;
+	grid-gap: 16px;
+}
+
+form ul li {
+	list-style: none;
+}
+
+form label {
+	font-size: 0.8rem;
+}
+
+form input {
+	display: block;
+	font-size: 0.8rem;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+form input:focus {
+	outline: none;
+	border: 1px solid #1d4ed8;
+}
+
+form input:focus:invalid {
+	border-color: #b91c1c;
+}
+
+form ul li,
+form input {
+	width: 100%;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+}
+
+#submit {
+	margin: 32px 0 48px;
+	font-size: 1rem;
+	color: #fff;
+	background-color: #006FAE;
+	width: 256px;
+	border-radius: 2px;
+}
+
+#submit:hover {
+	filter: brightness(0.9);
+}
+
+form input,
+#submit {
+	padding: 8px 4px;
+}
+
+#login-wrapper {
+	position: relative;
+	bottom: 16px;
+}
+
+#login {
+	text-decoration: none;
+	color: #006FAE;
+	font-weight: bold;
+}
+
+@media only screen and (min-width: 315px) {
+	form ul {
+		justify-content: center;
+	}
+}
+
+@media only screen and (min-width: 668px) {
+	form ul {
+		grid-template-columns: repeat(2, 300px);
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	@font-face {
+		font-family: "Norse Bold";
+		src: url(assets/Norse-Bold.otf);
+	}
+	aside {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 40vw;
+	}
+	aside img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	#logo-wrapper {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 16px;
+		height: 128px;
+		width: 100%;
+		padding: 0 16px;
+		background-color: #000;
+		opacity: 0.5;
+	}
+	#logo {
+		height: 100%;
+		width: auto;
+	}
+	#logo-text {
+		font-family: "Norse Bold", Arial, sans-serif;
+		color: #fff;
+		font-size: 88px;
+	}
+	#attribution {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 8px 0;
+		text-align: center;
+		font-size: 0.8rem;
+	}
+}
